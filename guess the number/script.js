@@ -2,7 +2,6 @@
 const secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 
-// document.querySelector('#secretNumber').textContent = secretNumber;
 document.querySelector('#check').addEventListener('click', function () {
   console.log(document.querySelector('#guess').value);
   const guess = Number(document.querySelector('#guess').value);
@@ -13,13 +12,9 @@ document.querySelector('#check').addEventListener('click', function () {
     document.querySelector('#secretNumber').textContent = secretNumber;
     highScore();
     winning();
-    // document.querySelector('body').style.backgroundColor = '#60b347';
-    // document.querySelector('#secretNumber').style.width = '65rem';
-  } else if (guess > secretNumber) {
-    document.querySelector('#message').textContent = ' to high!';
-    decreaseScore();
-  } else if (guess < secretNumber) {
-    document.querySelector('#message').textContent = ' to low!';
+  } else if (guess !== secretNumber) {
+    document.querySelector('#message').textContent =
+      guess > secretNumber ? ' to high!' : ' to low!';
     decreaseScore();
   }
 });
