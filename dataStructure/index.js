@@ -1,42 +1,83 @@
 "use strict";
-// const restaurant = {
-// 	name: "Classico Italiano",
-// 	location: "Via Angelo Tavanti 23, Firenze, Italy",
-// 	categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
-// 	starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
-// 	mainMenu: ["Pizza", "Pasta", "Risotto"],
-// };
-// const [a, b] = restaurant.categories;
-// console.log(a, b);
-// const [d, , c] = restaurant.starterMenu;
-// console.log(c, d);
-// let [secondary, first] = restaurant.mainMenu;
-// console.log(secondary, first);
-// [first, secondary] = [secondary, first];
-// console.log(secondary, first);
-// .
-let q = document.getElementById("q");
-let ans1 = document.getElementById("ans1");
-let ans2 = document.getElementById("ans2");
-let ans3 = document.getElementById("ans3");
-let ans4 = document.getElementById("ans4");
-
-let questionList = {
-	question: "آیا یک برابر دو است؟",
-	answers: [
-		{ option: "بله", flag: true },
-		{ option: "خیر", flag: false },
-		{ option: "نمیدانم", flag: false },
-		{ option: "اطلاعی ندارم", flag: false },
-	],
+const restaurant = {
+	name: "Classico Italiano",
+	location: "Via Angelo Tavanti 23, Firenze, Italy",
+	categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
+	starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
+	mainMenu: ["Pizza", "Pasta", "Risotto"],
+	openingHours: {
+		thu: {
+			open: 12,
+			close: 22,
+		},
+		fri: {
+			open: 11,
+			close: 23,
+		},
+		sat: {
+			open: 0, // Open 24 hours
+			close: 24,
+		},
+	},
 };
+const jonas = {
+	firstName: "jonas",
+	birthYear: "1991",
+	calcAge: function () {
+		console.log(2037 - this.birthYear);
+		let self = this;
+		const isMillennial = function () {
+			console.log(this);
+			console.log(self.birthYear >= 1981 && self.birthYear <= 1996);
+		};
+		isMillennial();
+	},
 
-q.innerHTML = questionList.question;
-ans1.innerHTML = questionList.answers[0].option;
-ans2.innerHTML = questionList.answers[1].option;
-ans3.innerHTML = questionList.answers[2].option;
-ans4.innerHTML = questionList.answers[3].option;
-console.log(questionList.answers[0].option);
-// for (let i = 0; (answers[0] = true); i++) {
-// 	point = i;
-// }
+	greet: function () {
+		console.log(`hi ${this.firstName}`);
+	},
+};
+jonas.calcAge();
+jonas.greet();
+
+const dickHead = {
+	name: "morad",
+	age: 4565,
+	lastName: "kale kiri",
+	biNamoos: ["koskesh", "kooni pedar"],
+};
+const kirPedar = Object.assign({}, dickHead);
+console.log(kirPedar);
+
+kirPedar.biNamoos.push("Kooni"); //add new element to array
+console.log(kirPedar);
+console.log(dickHead);
+
+const { name, openingHours, categories } = restaurant;
+console.log(name, openingHours, categories);
+
+const { name: kir, openingHours: kooniKhan, categories: items } = restaurant;
+console.log(kir, kooniKhan, items);
+const { menu: kiri = "menuItems", openingHours: kooniKash, categories: itemsHa } = restaurant;
+console.log(kiri, kooniKash, itemsHa);
+const arr = [1, 4, 2, 6, 345, 2435, 234, 678, 234];
+const newArr = ["flllkd", ...arr];
+console.log(arr);
+console.log(newArr);
+console.log(...newArr);
+const newMenu = [...restaurant.mainMenu, "gnocci"];
+console.log(newMenu);
+restaurant.mainMenu = newMenu;
+console.log(restaurant.mainMenu);
+restaurant.mainMenu = [...restaurant.mainMenu, "ghorme sabsi"];
+console.log(restaurant.mainMenu);
+restaurant.menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(restaurant);
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+for (const item of menu) {
+	console.log(item);
+}
+console.log(restaurant.openingHours.mon?.open);
+const day = window.prompt("what day you want to check?");
+restaurant.openingHours.console.log(`opening hours of restaurant on${day} is ${restaurant.openingHours.fri?.open}`);
+const exercise = "fsdknf";
