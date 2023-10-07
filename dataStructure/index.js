@@ -67,15 +67,9 @@ console.log(name, openingHours, categories);
 // console.log(...newArr);
 const newMenu = [...restaurant.mainMenu, "gnocci"];
 
-
-
 console.log(newMenu);
 
-
-
 restaurant.mainMenu = newMenu;
-
-
 
 console.log(restaurant.mainMenu);
 
@@ -83,10 +77,23 @@ restaurant.mainMenu = [...restaurant.mainMenu, "ghorme sabzi"];
 console.log(restaurant.mainMenu);
 restaurant.menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
 console.log(restaurant);
-// looping over arrays  
+// looping over arrays
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 for (const item of menu) {
 	console.log(item);
 }
 
 // looping objects
+
+// sets and maps
+
+let question = new Map([
+	["question", "Which one is the best programming language?"],
+	["answer1", "C"],
+	["answer2", "java"],
+	["answer3", "c++"],
+	["answer4", "javascript"],
+	["correct", "answer4"],
+	[true, "correct"],
+	[false, "try again"],
+]);
