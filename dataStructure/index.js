@@ -40,44 +40,53 @@ const jonas = {
 jonas.calcAge();
 jonas.greet();
 
-const dickHead = {
-	name: "morad",
-	age: 4565,
-	lastName: "kale kiri",
-	biNamoos: ["koskesh", "kooni pedar"],
-};
-const kirPedar = Object.assign({}, dickHead);
-console.log(kirPedar);
+// const dickHead = {
+// 	name: "morad",
+// 	age: 4565,
+// 	lastName: "kale kiri",
+// 	biNamoos: ["koskesh", "kooni pedar"],
+// };
+// const kirPedar = Object.assign({}, dickHead);
+// console.log(kirPedar);
 
-kirPedar.biNamoos.push("Kooni"); //add new element to array
-console.log(kirPedar);
-console.log(dickHead);
+// kirPedar.biNamoos.push("Kooni"); //add new element to array
+// console.log(kirPedar);
+// console.log(dickHead);
 
 const { name, openingHours, categories } = restaurant;
 console.log(name, openingHours, categories);
 
-const { name: kir, openingHours: kooniKhan, categories: items } = restaurant;
-console.log(kir, kooniKhan, items);
-const { menu: kiri = "menuItems", openingHours: kooniKash, categories: itemsHa } = restaurant;
-console.log(kiri, kooniKash, itemsHa);
-const arr = [1, 4, 2, 6, 345, 2435, 234, 678, 234];
-const newArr = ["flllkd", ...arr];
-console.log(arr);
-console.log(newArr);
-console.log(...newArr);
+// const { name: kir, openingHours: kooniKhan, categories: items } = restaurant;
+// console.log(kir, kooniKhan, items);
+// const { menu: kiri = "menuItems", openingHours: kooniKash, categories: itemsHa } = restaurant;
+// console.log(kiri, kooniKash, itemsHa);
+// const arr = [1, 4, 2, 6, 345, 2435, 234, 678, 234];
+// const newArr = ["flllkd", ...arr];
+// console.log(arr);
+// console.log(newArr);
+// console.log(...newArr);
 const newMenu = [...restaurant.mainMenu, "gnocci"];
+
+
+
 console.log(newMenu);
+
+
+
 restaurant.mainMenu = newMenu;
+
+
+
 console.log(restaurant.mainMenu);
-restaurant.mainMenu = [...restaurant.mainMenu, "ghorme sabsi"];
+
+restaurant.mainMenu = [...restaurant.mainMenu, "ghorme sabzi"];
 console.log(restaurant.mainMenu);
 restaurant.menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
 console.log(restaurant);
+// looping over arrays  
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 for (const item of menu) {
 	console.log(item);
 }
-console.log(restaurant.openingHours.mon?.open);
-const day = window.prompt("what day you want to check?");
-restaurant.openingHours.console.log(`opening hours of restaurant on${day} is ${restaurant.openingHours.fri?.open}`);
-const exercise = "fsdknf";
+
+// looping objects
