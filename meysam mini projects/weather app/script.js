@@ -1,0 +1,1 @@
+let res = fetch("https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&appid={1e90caba288d7fb7fa32425c99436c0e}")

@@ -82,6 +82,7 @@ cBtn.addEventListener("click", () => {
 		if (enQwerty[i] === a) {
 			let j = faQwerty[i];
 			console.log(j);
+			res.innerHTML= j
 		}
 	}
 });
