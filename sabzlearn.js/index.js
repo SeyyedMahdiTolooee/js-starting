@@ -33,5 +33,13 @@ average = function (x, y, z) {
 	let avg = (x + y + z) / 3;
 	console.log(avg);
 };
-average(8, 12, 34	);
+average(8, 12, 34);
 // string methods        /////////////////////////////////////////////////////////////////////////////////////////
+
+// math /////////////////////////////////////////////////////////////////////////////////////////
+
+console.log("line 41 says", Math.PI);
+console.log("line 42 says", Math.sqrt(483));
+
+const randomNumber = Math.floor(Math.random() * (600 - 149) + 149);
+console.log(randomNumber);
