@@ -79,27 +79,54 @@ console.log("num2", num2);
 // 	console.log(i);
 // } while (i < 3);
 
-let firstNumber = Number(prompt("enter first number:", 0));
-let secondNumber = Number(prompt("enter second number:", 0));
-let power = 1;
+// let firstNumber = Number(prompt("enter first number:", 0));
+// let secondNumber = Number(prompt("enter second number:", 0));
+// let power = 1;
 
-for (let i = 0; i < secondNumber; i++) {
-	power = power * firstNumber;
-	console.log(power);
+// for (let i = 0; i < secondNumber; i++) {
+// 	power = power * firstNumber;
+// 	console.log(power);
+// }
+// console.log("the power is:", power);
+// let j = 0;
+// let power2 = 1;
+// while (j < secondNumber) {
+// 	power2 = power2 * firstNumber;
+// 	console.log(power2);
+// 	j++;
+// }
+// console.log("the while power is", power2);
+// let power3 = 1;
+// let k = 0;
+// do {
+// 	k++;
+// 	power3 = power3 * firstNumber;
+// } while (k < secondNumber);
+// console.log("do while power is", power3);
+
+let sum = 0;
+let avgArr = [14, 15, 28, 24, 246, 32, 16, 17];
+for (let i = 0; i < avgArr.length; i++) {
+	sum = sum + avgArr[i];
 }
-console.log("the power is:", power);
-let j = 0;
-let power2 = 1;
-while (j < secondNumber) {
-	power2 = power2 * firstNumber;
-	console.log(power2);
-	j++;
-}
-console.log("the while power is", power2);
-let power3 = 1
-let k=0
-do {
-	k++
-	power3=power3*firstNumber
-} while (k < secondNumber);
-console.log('do while power is',power3)
+console.log(sum);
+console.log(avgArr.length);
+let avgArrAvg = sum / avgArr.length;
+console.log(avgArrAvg);
+
+let usersData = {
+	user100001: {
+		userId: 100001,
+		firstName: "Ali",
+		lastName: "Alavi",
+		age: 24,
+		height: 194,
+	},
+	user100002: {
+		userId: 100002,
+		firstName: "mohammad",
+		lastName: "kiriMagham",
+		age: 25,
+		height: 183,
+	},
+};
